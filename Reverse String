@@ -1,0 +1,20 @@
+//Without inbuilt methods:
+
+var abc = "keerti"
+
+function reverse(str) {
+    var temp = "";
+    for(var i=str.length-1; i>=0; i--){
+        temp = temp+str[i]
+    }
+    return temp;
+}
+console.log(reverse(abc))
+
+//With inbuilt methods:
+
+function reverse(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverse("keerti")); // Output: "itreek"
