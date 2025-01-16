@@ -37,3 +37,24 @@ console.log(anagram(word1, word4));  // Output: no
 
 //O(n)
 
+function anagram3(word1, word2){
+     if (word1.length !== word2.length) return "no";
+     else {
+    var count = {};
+    for(var i=0; i<word1.length; i++){
+        if(!count[word1[i]]){
+            count[word1[i]]=1
+        }
+        else count[word1[i]]++;
+    }
+    for(var i=0; i<word2.length; i++){
+    if(!count[word2[i]]){
+        return "no"
+    }
+        count[word2[i]]--;
+    }
+          return "yes";
+     }
+}
+
+console.log(anagram3(word1, word2))
