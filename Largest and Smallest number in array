@@ -1,0 +1,19 @@
+//largest and smallest number in an array
+
+var arr = [4, 5, 0, 10, 99, 45, 205, 0, 3, 45];
+var s = arr[0];
+var l = arr[0];
+
+function snl(arr){
+    var s = arr[0];
+    var l = arr[0];
+    for(var i=1; i<arr.length; i++){
+        if(arr[i]>l)
+        l=arr[i]
+        if(arr[i]<s)
+        s=arr[i];
+    }
+    console.log("largest is " + l + " and smallest is " + s)
+}
+snl(arr);
+
